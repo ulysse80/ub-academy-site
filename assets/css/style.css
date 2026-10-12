@@ -307,18 +307,24 @@ p { margin: 0 0 1em; }
 .apropos__signature span { display: block; font-family: var(--sans); font-style: normal; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-top: 4px; }
 @media (min-width: 900px) { .apropos { grid-template-columns: .8fr 1.2fr; gap: 72px; } }
 
-/* ---------- Témoignages (emplacements à compléter) ---------- */
+/* ---------- Témoignages ---------- */
 .temoignages { display: grid; gap: 18px; }
 .temoignage {
-  margin: 0; padding: 28px 24px; border-radius: var(--rayon);
-  border: 2px dashed #c9bfa9; background: #fffdf8; color: var(--texte-doux);
+  margin: 0; padding: 26px 24px; border-radius: var(--rayon);
+  background: #fff; border: 1px solid var(--bord); box-shadow: var(--ombre-sm);
+  display: flex; flex-direction: column; gap: 18px;
 }
-.temoignage blockquote { margin: 0 0 14px; font-family: var(--serif); font-style: italic; font-size: 1.1rem; }
-.temoignage figcaption { font-size: .9rem; font-weight: 700; color: var(--marine); }
-.temoignage .a-completer {
-  display: inline-block; margin-bottom: 14px; padding: 3px 10px; border-radius: 999px;
-  background: #fff1e3; color: var(--orange-fonce); font-size: .75rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+.temoignage__auteur { display: flex; align-items: center; gap: 14px; }
+.temoignage__initiales {
+  flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--marine); color: var(--orange); font-weight: 800; font-size: .95rem; letter-spacing: .04em;
 }
+.temoignage__auteur strong { display: block; color: var(--marine); font-size: 1.02rem; }
+.temoignage__auteur strong + span { font-size: .88rem; color: var(--texte-doux); }
+.temoignage blockquote { margin: 0; }
+.temoignage blockquote p { margin: 0; font-family: var(--serif); font-style: italic; font-size: 1.08rem; line-height: 1.55; color: var(--texte); }
+.temoignages__note { margin: 18px 0 0; text-align: center; font-size: .82rem; color: var(--texte-doux); }
 @media (min-width: 820px) { .temoignages { grid-template-columns: repeat(3, 1fr); } }
 
 /* ---------- FAQ ---------- */

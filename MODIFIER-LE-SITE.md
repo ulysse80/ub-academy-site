@@ -1,5 +1,7 @@
 # Modifier le site UB Academy — mode d'emploi
 
+> **Le plus simple :** demandez à Claude (« change tel texte », « remplace telle photo »). Il fait la modification et vous montre le résultat. Ce guide sert si vous voulez le faire vous-même.
+
 Ce guide explique comment changer vous-même un texte, une photo, la vidéo ou un numéro, **directement sur github.com**, sans rien installer.
 
 Chaque modification enregistrée est mise en ligne automatiquement en 1 à 2 minutes (une fois GitHub Pages activé — voir la dernière partie).
@@ -38,26 +40,29 @@ Les lignes qui commencent par `<!--` et finissent par `-->` sont des **notes inv
 
 ---
 
-## 3. Ajouter un vrai témoignage
+## 3. Modifier ou ajouter un témoignage
 
-Dans `index.html`, cherchez (Ctrl + F) : `À compléter`. Vous trouverez 3 blocs comme celui-ci :
+Dans `index.html`, cherchez (Ctrl + F) le prénom de l'élève, par exemple `Yasmine`. Vous trouverez un bloc comme celui-ci :
 
 ```html
-<figure class="temoignage">
-  <span class="a-completer">À compléter</span>
-  <blockquote>« Témoignage de l'élève en 2-3 phrases : situation de départ → résultat obtenu. »</blockquote>
-  <figcaption>— Prénom, objectif</figcaption>
+<figure class="temoignage revele">
+  <figcaption class="temoignage__auteur">
+    <span class="temoignage__initiales" aria-hidden="true">YK</span>
+    <span><strong>Yasmine K.</strong><span>Mandarin débutant</span></span>
+  </figcaption>
+  <blockquote><p>« J'ai pu commencer le mandarin … »</p></blockquote>
 </figure>
 ```
 
-Pour chaque témoignage réel (avec l'accord écrit de l'élève) :
-1. Remplacez la phrase entre « » par les mots de l'élève.
-2. Remplacez `Prénom, objectif` par, par exemple, `Sara, DELF B2`.
-3. **Supprimez toute la ligne** `<span class="a-completer">À compléter</span>`.
+- Le texte de l'avis est entre « ».
+- `Yasmine K.` est le prénom + l'initiale du nom ; `Mandarin débutant` est l'objectif.
+- `YK` sont les initiales affichées dans le rond.
 
-Faites de même dans `en/index.html` (cherchez `To be completed`), en traduisant le témoignage.
+Pour **ajouter** un avis : copiez un bloc entier (de `<figure` jusqu'à `</figure>`), collez-le juste en dessous, puis changez les textes.
 
-> Ne publiez jamais un témoignage inventé ou non autorisé.
+Faites de même dans `en/index.html`, avec la traduction anglaise.
+
+> Ne publiez jamais un témoignage inventé ou sans l'accord de l'élève.
 
 ---
 

@@ -34,7 +34,7 @@ Ce dépôt contient le nouveau site vitrine d'UB Academy. Lis ce fichier et TOUT
 - Vidéo : `medias/video/ub-academy-20s-vertical.mp4` (format 9:16). Elle ne doit jamais être déformée ni coupée sur mobile.
 
 ## Interdits
-- Aucun témoignage inventé. Les 3 témoignages de l'ancien site (Yasmine K., Lina B., Amine R.) ne sont PAS à reprendre tant qu'Ulysse ne les a pas confirmés : prévois la section avec des emplacements vides clairement marqués « à compléter ».
+- Aucun témoignage inventé. Les 3 témoignages de l'ancien site (Yasmine K., Lina B., Amine R.) ont été **confirmés par Ulysse comme réels, avec l'accord des élèves** : ils sont publiés tels quels (EN = traduction signalée). Ne pas utiliser les portraits qui les accompagnaient sur l'ancien site (ce ne sont pas les élèves) : initiales uniquement. Pas d'étoiles ni de dates relatives (« il y a 10 mois »).
 - Aucun taux de réussite, garantie, certification, prix ou chiffre inventé.
 - Pas de superlatifs sans preuve (« le meilleur », « révolutionnaire »).
 - Ne rien publier (GitHub Pages ou autre) avant qu'Ulysse ait vu le site et donné son accord explicite.

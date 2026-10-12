@@ -119,19 +119,13 @@ Pour les horaires : cherchez `10:00–12:00`.
 
 ---
 
-## 7. Activer le formulaire de contact (une seule fois)
+## 7. Formulaire de contact (déjà activé)
 
-Le formulaire utilise un service gratuit, **Web3Forms**, qui envoie chaque demande sur ubacademyofficial@gmail.com.
+Le formulaire utilise un service gratuit, **Web3Forms** (250 messages par mois), qui envoie chaque demande sur ubacademyofficial@gmail.com. Il est **déjà activé** : la clé est enregistrée tout en haut du fichier `assets/js/main.js` (ligne `var WEB3FORMS_CLE = "…";`).
 
-1. Allez sur [web3forms.com](https://web3forms.com), cliquez sur **Create your Access Key**, entrez `ubacademyofficial@gmail.com`.
-2. Vous recevez par e-mail une clé qui ressemble à `a1b2c3d4-xxxx-xxxx-xxxx-xxxxxxxxxxxx`.
-3. Ouvrez `assets/js/main.js`, cliquez sur le crayon ✏️, et tout en haut remplacez :
-   `var WEB3FORMS_CLE = "A_REMPLIR";`
-   par
-   `var WEB3FORMS_CLE = "votre-clé-reçue";`
-4. **Commit changes**. Faites un essai depuis le site : vous devez recevoir l'e-mail.
+Pour retrouver ou changer la clé : connectez-vous sur [app.web3forms.com](https://app.web3forms.com), cliquez sur le formulaire « Site UB Academy » et copiez son **Access Key**. Collez-la ensuite entre les guillemets de la ligne `var WEB3FORMS_CLE = "…";` (crayon ✏️, puis **Commit changes**), ou demandez simplement à Claude de le faire.
 
-Tant que la clé n'est pas remplie, le formulaire n'est pas perdu : il ouvre WhatsApp avec le message du visiteur déjà rédigé.
+Si un jour l'envoi par e-mail ne fonctionne pas, aucune demande n'est perdue : le formulaire propose au visiteur d'envoyer son message, déjà rédigé, sur WhatsApp.
 
 ---
 

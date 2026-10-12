@@ -2,15 +2,12 @@
    UB Academy — scripts du site
    ========================================================================== */
 
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>  À REMPLIR  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-   Clé du formulaire de contact (service gratuit Web3Forms).
-   1. Allez sur https://web3forms.com, saisissez ubacademyofficial@gmail.com
-   2. Vous recevez une « Access Key » par e-mail.
-   3. Collez-la entre les guillemets ci-dessous, à la place de A_REMPLIR.
-   Tant que la clé n'est pas remplie, le formulaire ouvre WhatsApp avec le
-   message du visiteur déjà rédigé : aucune demande n'est perdue.
-   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
-var WEB3FORMS_CLE = "A_REMPLIR";
+/* Clé du formulaire de contact (service gratuit Web3Forms, formulaire
+   « Site UB Academy » sur https://app.web3forms.com → « Access Key »).
+   Les messages arrivent sur ubacademyofficial@gmail.com.
+   Si l'envoi échoue, le visiteur peut envoyer son message, déjà rédigé,
+   sur WhatsApp : aucune demande n'est perdue. */
+var WEB3FORMS_CLE = "73d8fc14-1df1-42e3-92a5-11368d6ae859";
 
 /* Numéro WhatsApp utilisé par le formulaire (sans +, sans espaces). */
 var WHATSAPP_NUMERO = "212602431299";

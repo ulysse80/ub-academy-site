@@ -39,9 +39,10 @@ var WHATSAPP_NUMERO = "212602431299";
   /* ----- Aperçu local (fichier ouvert par double-clic, sans serveur) :
      les liens vers un dossier (« en/ », « ../ ») doivent viser index.html ----- */
   if (location.protocol === "file:") {
-    document.querySelectorAll('a[href$="/"]').forEach(function (a) {
-      var href = a.getAttribute("href");
-      if (!/^[a-z]+:/i.test(href)) a.setAttribute("href", href + "index.html");
+    document.querySelectorAll("a[href]").forEach(function (a) {
+      // « en/ », « ../ », « ./#faq » → « en/index.html », « ../index.html », « ./index.html#faq »
+      var m = a.getAttribute("href").match(/^([^:#?]*\/)(#.*)?$/);
+      if (m) a.setAttribute("href", m[1] + "index.html" + (m[2] || ""));
     });
   }
 

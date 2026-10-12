@@ -375,6 +375,16 @@ p { margin: 0 0 1em; }
 @media (min-width: 640px) { .champs--2 { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 960px) { .contact { grid-template-columns: .9fr 1.1fr; gap: 64px; } }
 
+/* ---------- Pages de texte (confidentialité) ---------- */
+.page-texte { max-width: 760px; }
+.page-texte h1 { font-size: clamp(1.9rem, 5vw, 2.6rem); }
+.page-texte h2 { font-size: 1.3rem; margin: 2em 0 .5em; }
+.page-texte p, .page-texte li { color: var(--texte-doux); }
+.page-texte ul { padding-left: 1.2em; margin: 0 0 1em; }
+.page-texte li { margin-bottom: .4em; }
+.page-texte strong { color: var(--texte); }
+.page-texte__maj { margin: 2.5em 0 1.5em; font-size: .9rem; }
+
 /* ---------- Pied de page ---------- */
 .pied { background: #020b1c; color: #9fb0d3; padding: 56px 0 96px; font-size: .95rem; }
 .pied__grille { display: grid; gap: 32px; }

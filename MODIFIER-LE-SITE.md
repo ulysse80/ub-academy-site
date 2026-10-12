@@ -14,6 +14,7 @@ Chaque modification enregistrée est mise en ligne automatiquement en 1 à 2 min
 |---|---|
 | Textes de la version **française** | `index.html` |
 | Textes de la version **anglaise** | `en/index.html` |
+| Page **Confidentialité** (FR / EN) | `confidentialite.html` / `en/privacy.html` |
 | Clé du formulaire de contact | `assets/js/main.js` (tout en haut) |
 | Couleurs du site | `assets/css/style.css` (tout en haut) |
 | Photos | dossier `assets/img/` |

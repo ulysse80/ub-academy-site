@@ -1,0 +1,15 @@
+=== SESSION 1 — à coller dans la première session cloud ===
+
+Lis d'abord CLAUDE.md puis tous les fichiers du dossier contenu/ et regarde les médias du dossier medias/.
+
+Construis le nouveau site vitrine bilingue (FR/EN) d'UB Academy en respectant strictement CLAUDE.md :
+1. Inventaire rapide : ce que tu as trouvé, ce qui manque, les contradictions entre les fichiers et comment tu les as tranchées selon CLAUDE.md.
+2. Crée le site complet (index.html FR + en/index.html EN, CSS, JS, images optimisées) avec toutes les sections de contenu/01-structure.md, la FAQ de 12 questions, la vidéo, le formulaire et le bouton WhatsApp flottant.
+3. Ajoute MODIFIER-LE-SITE.md, sitemap.xml et robots.txt.
+4. Vérifie le rendu sur mobile (375 px) et ordinateur (1440 px) avec des captures, corrige ce qui déborde ou se coupe.
+5. Termine par : la liste des éléments que je dois valider ou fournir (témoignages, formule « natif », clé du formulaire), et les étapes exactes pour activer GitHub Pages.
+
+Pousse le résultat sur une branche et ouvre une pull request que je pourrai relire.
+
+=== SESSION 2 (plus tard) — après avoir regardé l'aperçu ===
+Voici mes retours sur le site : [liste tes changements]. Applique-les, revérifie mobile et ordinateur, et mets à jour la pull request.

@@ -39,6 +39,15 @@ var WHATSAPP_NUMERO = "212602431299";
     }
   }[langue];
 
+  /* ----- Aperçu local (fichier ouvert par double-clic, sans serveur) :
+     les liens vers un dossier (« en/ », « ../ ») doivent viser index.html ----- */
+  if (location.protocol === "file:") {
+    document.querySelectorAll('a[href$="/"]').forEach(function (a) {
+      var href = a.getAttribute("href");
+      if (!/^[a-z]+:/i.test(href)) a.setAttribute("href", href + "index.html");
+    });
+  }
+
   var annee = document.getElementById("annee");
   if (annee) annee.textContent = new Date().getFullYear();
 

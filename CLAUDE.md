@@ -17,6 +17,8 @@ Ce dépôt contient le nouveau site vitrine d'UB Academy. Lis ce fichier et TOUT
 6. **« 300+ personnes accompagnées » est confirmé** et peut être affiché.
 7. **FAQ** : reprends les 12 questions de `contenu/ancien-site-contenu-et-faq.md`, réécrites au « je » et sans prix.
 8. Aucun prix affiché. Pas de calendrier de réservation.
+9. **Formule linguistique validée par Ulysse** : « Français et chinois natifs, anglais bilingue » (EN : « Native French and Chinese, bilingual English »). Ne jamais écrire « anglais courant ».
+10. **Promesses autorisées : uniquement** « réponse sous 24 h » et « premier échange gratuit de 15 min ». Ne pas mentionner de cours d'essai / premier cours sans engagement, de taille de groupe (« jusqu'à 10 ») ni de moyen de paiement (« carte bancaire »).
 
 ## Contact
 - WhatsApp : +212 602431299 → liens `https://wa.me/212602431299?text=...` avec messages pré-remplis (modèles dans `contenu/04-whatsapp-et-photos.md`, remplace 212XXXXXXXXX).
@@ -35,7 +37,7 @@ Ce dépôt contient le nouveau site vitrine d'UB Academy. Lis ce fichier et TOUT
 - Aucun témoignage inventé. Les 3 témoignages de l'ancien site (Yasmine K., Lina B., Amine R.) ne sont PAS à reprendre tant qu'Ulysse ne les a pas confirmés : prévois la section avec des emplacements vides clairement marqués « à compléter ».
 - Aucun taux de réussite, garantie, certification, prix ou chiffre inventé.
 - Pas de superlatifs sans preuve (« le meilleur », « révolutionnaire »).
-- **À faire valider par Ulysse avant publication** : la formule « chinois natif / français natif » des textes réécrits.
+- Ne rien publier (GitHub Pages ou autre) avant qu'Ulysse ait vu le site et donné son accord explicite.
 
 ## Technique
 - Site **statique** (HTML/CSS/JS, sans framework lourd), une page par langue (`index.html` = FR, `en/index.html` = EN), publiable sur **GitHub Pages** sans étape de build.

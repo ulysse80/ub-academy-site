@@ -130,7 +130,19 @@ Tant que la clé n'est pas remplie, le formulaire n'est pas perdu : il ouvre Wha
 
 ---
 
-## 8. Mettre le site en ligne (GitHub Pages)
+## 8. Voir le site sur votre ordinateur, sans le mettre en ligne
+
+1. Ouvrez la page de la branche de travail sur github.com (lien donné dans la pull request).
+2. Cliquez sur le bouton vert **Code**, puis **Download ZIP**.
+3. Ouvrez le fichier téléchargé : double-clic sur Mac ; sur Windows, clic droit → **Extraire tout**.
+4. Dans le dossier obtenu, double-cliquez sur **index.html** : le site s'ouvre dans votre navigateur, comme en ligne (version anglaise via le bouton EN).
+5. Pour voir la version téléphone dans Chrome : clic droit sur la page → **Inspecter**, puis l'icône téléphone/tablette en haut à gauche du panneau (ou **Ctrl + Maj + M**, **Cmd + Maj + M** sur Mac) et choisissez un iPhone dans la liste.
+
+Personne d'autre que vous ne voit cette copie. Il faut une connexion internet pour les polices d'écriture ; les boutons WhatsApp fonctionnent normalement.
+
+---
+
+## 9. Mettre le site en ligne (GitHub Pages)
 
 À faire une seule fois, après avoir validé la pull request :
 

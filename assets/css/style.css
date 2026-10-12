@@ -10,7 +10,7 @@
   --creme-2: #efe6d6;
   --blanc: #ffffff;
   --orange: #ff8114;      /* touche d'orange chaud */
-  --orange-fonce: #b9540a;/* orange lisible sur fond clair */
+  --orange-fonce: #ab4d08;/* orange lisible sur fond clair (contraste ≥ 4,5) */
   --bronze: #6c3d0f;      /* couleur du logo */
   --texte: #1a2338;
   --texte-doux: #4a5470;
@@ -383,6 +383,7 @@ p { margin: 0 0 1em; }
 .pied ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .pied a { color: #dfe5f1; text-decoration: none; }
 .pied a:hover { color: var(--orange); }
+.pied a[hreflang] { text-decoration: underline; text-underline-offset: 3px; }
 .pied__bas { margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, .1); display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; font-size: .85rem; }
 @media (min-width: 820px) { .pied__grille { grid-template-columns: 1.4fr 1fr 1fr; } }
 

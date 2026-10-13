@@ -17,6 +17,8 @@ Ce dépôt contient le nouveau site vitrine d'UB Academy. Lis ce fichier et TOUT
 6. **« 300+ personnes accompagnées » est confirmé** et peut être affiché.
 7. **FAQ** : reprends les 12 questions de `contenu/ancien-site-contenu-et-faq.md`, réécrites au « je » et sans prix.
 8. Aucun prix affiché. Pas de calendrier de réservation.
+9. **Formule linguistique validée par Ulysse** : « Français et chinois natifs, anglais bilingue » (EN : « Native French and Chinese, bilingual English »). Ne jamais écrire « anglais courant ».
+10. **Promesses autorisées : uniquement** « réponse sous 24 h » et « premier échange gratuit de 15 min ». Ne pas mentionner de cours d'essai / premier cours sans engagement, de taille de groupe (« jusqu'à 10 ») ni de moyen de paiement (« carte bancaire »).
 
 ## Contact
 - WhatsApp : +212 602431299 → liens `https://wa.me/212602431299?text=...` avec messages pré-remplis (modèles dans `contenu/04-whatsapp-et-photos.md`, remplace 212XXXXXXXXX).
@@ -29,13 +31,16 @@ Ce dépôt contient le nouveau site vitrine d'UB Academy. Lis ce fichier et TOUT
 - Ambiance : premium, moderne, humaine, internationale, rassurante.
 - Couleurs : bleu marine, blanc, une touche d'orange chaud. Le logo (`medias/logo/logo-ub-academy.png`) est brun/bronze (#6C3D0F) : vérifie qu'il reste lisible et harmonieux ; propose une adaptation si besoin.
 - Photos : `medias/photos-ancien-site/` contient les images de l'ancien site. **Les portraits d'Ulysse sont de vraies photos, réutilisation autorisée.** N'utilise aucune photo d'une autre personne présentée comme Ulysse ou comme élève.
-- Vidéo : `medias/video/ub-academy-20s-vertical.mp4` (format 9:16). Elle ne doit jamais être déformée ni coupée sur mobile.
+- Vidéos (format 9:16, jamais déformées ni coupées sur mobile) : l'animation `medias/video/ub-academy-20s-vertical.mp4` (section « 20 secondes », lecture auto sans son) et la présentation d'Ulysse face caméra `assets/video/ulysse-presentation.mp4` (section « Qui suis-je ? », lecture avec le son au clic).
+- Photo de salle de classe (élèves autour d'une table, logo UB au mur) : écartée, car elle montre un lieu physique et des personnes présentées comme élèves. Ne pas l'ajouter sans nouvelle décision explicite d'Ulysse.
 
 ## Interdits
-- Aucun témoignage inventé. Les 3 témoignages de l'ancien site (Yasmine K., Lina B., Amine R.) ne sont PAS à reprendre tant qu'Ulysse ne les a pas confirmés : prévois la section avec des emplacements vides clairement marqués « à compléter ».
+- Aucun témoignage inventé. Les 3 témoignages de l'ancien site (Yasmine K., Lina B., Amine R.) ont été **confirmés par Ulysse comme réels, avec l'accord des élèves** : ils sont publiés tels quels (EN = traduction signalée). Ne pas utiliser les portraits qui les accompagnaient sur l'ancien site (ce ne sont pas les élèves) : initiales uniquement. Pas d'étoiles ni de dates relatives (« il y a 10 mois »).
 - Aucun taux de réussite, garantie, certification, prix ou chiffre inventé.
 - Pas de superlatifs sans preuve (« le meilleur », « révolutionnaire »).
-- **À faire valider par Ulysse avant publication** : la formule « chinois natif / français natif » des textes réécrits.
+- **Aucun grand tiret (— ou –) dans les textes visibles du site** : Ulysse trouve que ça « fait IA ». Utiliser une virgule, deux-points ou un point. Horaires écrits « de 10 h à 12 h ».
+- Blocs de cours : drapeau + nom de la langue (pas de slogan du type « Je parle. »).
+- Ne rien publier (GitHub Pages ou autre) avant qu'Ulysse ait vu le site et donné son accord explicite.
 
 ## Technique
 - Site **statique** (HTML/CSS/JS, sans framework lourd), une page par langue (`index.html` = FR, `en/index.html` = EN), publiable sur **GitHub Pages** sans étape de build.

@@ -1,0 +1,11 @@
+# Réglage de publication GitHub Pages.
+# Les dossiers et fichiers ci-dessous servent à préparer le site
+# mais ne doivent PAS être visibles en ligne.
+exclude:
+  - contenu
+  - medias
+  - CLAUDE.md
+  - MODIFIER-LE-SITE.md
+  - "PROMPT A COLLER DANS CLAUDE CODE.txt"
+  - README.md
+  - captures-revue

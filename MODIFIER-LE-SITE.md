@@ -80,7 +80,7 @@ Photos utilisées :
 | Fichier | Où elle apparaît | Taille conseillée |
 |---|---|---|
 | `ulysse-portrait-800.webp` et `ulysse-portrait-480.webp` | Haut de page | 800 × 1000 px et 480 × 600 px (format portrait 4:5) |
-| `ulysse-cours-en-ligne-1000.webp` et `-600.webp` | « Comment ça se passe » | 1000 px et 600 px de large |
+| `ulysse-bureau-1000.webp` et `-600.webp` | « Comment ça se passe » (photo en veste beige) | 1000 × 721 px et 600 × 433 px |
 | `ulysse-noir-blanc-700.webp` et `-480.webp` | « Qui suis-je ? » | 700 px et 480 px de large |
 | `illustration-communication.webp` | Bloc communication professionnelle | 900 px de large |
 | `og-ub-academy.jpg` | Image affichée quand on partage le lien (WhatsApp, Facebook…) | 1200 × 630 px |

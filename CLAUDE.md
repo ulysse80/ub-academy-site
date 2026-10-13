@@ -38,6 +38,8 @@ Ce dépôt contient le nouveau site vitrine d'UB Academy. Lis ce fichier et TOUT
 - Aucun témoignage inventé. Les 3 témoignages de l'ancien site (Yasmine K., Lina B., Amine R.) ont été **confirmés par Ulysse comme réels, avec l'accord des élèves** : ils sont publiés tels quels (EN = traduction signalée). Ne pas utiliser les portraits qui les accompagnaient sur l'ancien site (ce ne sont pas les élèves) : initiales uniquement. Pas d'étoiles ni de dates relatives (« il y a 10 mois »).
 - Aucun taux de réussite, garantie, certification, prix ou chiffre inventé.
 - Pas de superlatifs sans preuve (« le meilleur », « révolutionnaire »).
+- **Aucun grand tiret (— ou –) dans les textes visibles du site** : Ulysse trouve que ça « fait IA ». Utiliser une virgule, deux-points ou un point. Horaires écrits « de 10 h à 12 h ».
+- Blocs de cours : drapeau + nom de la langue (pas de slogan du type « Je parle. »).
 - Ne rien publier (GitHub Pages ou autre) avant qu'Ulysse ait vu le site et donné son accord explicite.
 
 ## Technique

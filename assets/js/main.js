@@ -20,7 +20,7 @@ var WHATSAPP_NUMERO = "212602431299";
   var TEXTES = {
     fr: {
       envoi: "Envoi en cours…",
-      ok: "Merci ! Votre demande est bien envoyée. Je vous réponds sous 24 h (lundi–samedi).",
+      ok: "Merci ! Votre demande est bien envoyée. Je vous réponds sous 24 h, du lundi au samedi.",
       erreur: "L'envoi n'a pas fonctionné. Envoyez-moi plutôt votre message, déjà rédigé, sur",
       sansCle: "Je vous ouvre WhatsApp avec votre message déjà rédigé : il ne reste qu'à l'envoyer.",
       entete: "Bonjour Ulysse, je vous écris depuis le site UB Academy.",
@@ -28,9 +28,9 @@ var WHATSAPP_NUMERO = "212602431299";
     },
     en: {
       envoi: "Sending…",
-      ok: "Thank you! Your request has been sent. I'll reply within 24 hours (Monday–Saturday).",
+      ok: "Thank you! Your request has been sent. I'll reply within 24 hours, Monday to Saturday.",
       erreur: "Sending failed. Please send me your message, already written, on",
-      sansCle: "I'm opening WhatsApp with your message already written — just press send.",
+      sansCle: "I'm opening WhatsApp with your message already written. Just press send.",
       entete: "Hi Ulysse, I'm writing from the UB Academy website.",
       nom: "Name", tel: "Phone", email: "Email", sujet: "Subject", message: "Message"
     }
@@ -158,7 +158,7 @@ var WHATSAPP_NUMERO = "212602431299";
     var donnees = Object.fromEntries(new FormData(form));
     donnees.access_key = WEB3FORMS_CLE;
     var sujetSel = form.querySelector("#sujet");
-    donnees.subject = "UB Academy — " + (sujetSel ? sujetSel.options[sujetSel.selectedIndex].text : "Nouvelle demande");
+    donnees.subject = "UB Academy | " + (sujetSel ? sujetSel.options[sujetSel.selectedIndex].text : "Nouvelle demande");
     donnees.from_name = "Site UB Academy (" + langue.toUpperCase() + ")";
     if (donnees.email) donnees.replyto = donnees.email;
 

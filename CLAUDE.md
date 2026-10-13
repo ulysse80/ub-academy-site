@@ -31,7 +31,8 @@ Ce dépôt contient le nouveau site vitrine d'UB Academy. Lis ce fichier et TOUT
 - Ambiance : premium, moderne, humaine, internationale, rassurante.
 - Couleurs : bleu marine, blanc, une touche d'orange chaud. Le logo (`medias/logo/logo-ub-academy.png`) est brun/bronze (#6C3D0F) : vérifie qu'il reste lisible et harmonieux ; propose une adaptation si besoin.
 - Photos : `medias/photos-ancien-site/` contient les images de l'ancien site. **Les portraits d'Ulysse sont de vraies photos, réutilisation autorisée.** N'utilise aucune photo d'une autre personne présentée comme Ulysse ou comme élève.
-- Vidéo : `medias/video/ub-academy-20s-vertical.mp4` (format 9:16). Elle ne doit jamais être déformée ni coupée sur mobile.
+- Vidéos (format 9:16, jamais déformées ni coupées sur mobile) : l'animation `medias/video/ub-academy-20s-vertical.mp4` (section « 20 secondes », lecture auto sans son) et la présentation d'Ulysse face caméra `assets/video/ulysse-presentation.mp4` (section « Qui suis-je ? », lecture avec le son au clic).
+- Photo de salle de classe (élèves autour d'une table, logo UB au mur) : écartée, car elle montre un lieu physique et des personnes présentées comme élèves. Ne pas l'ajouter sans nouvelle décision explicite d'Ulysse.
 
 ## Interdits
 - Aucun témoignage inventé. Les 3 témoignages de l'ancien site (Yasmine K., Lina B., Amine R.) ont été **confirmés par Ulysse comme réels, avec l'accord des élèves** : ils sont publiés tels quels (EN = traduction signalée). Ne pas utiliser les portraits qui les accompagnaient sur l'ancien site (ce ne sont pas les élèves) : initiales uniquement. Pas d'étoiles ni de dates relatives (« il y a 10 mois »).

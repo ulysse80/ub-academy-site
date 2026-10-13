@@ -81,7 +81,6 @@ Photos utilisées :
 |---|---|---|
 | `ulysse-portrait-800.webp` et `ulysse-portrait-480.webp` | Haut de page | 800 × 1000 px et 480 × 600 px (format portrait 4:5) |
 | `ulysse-bureau-1000.webp` et `-600.webp` | « Comment ça se passe » (photo en veste beige) | 1000 × 721 px et 600 × 433 px |
-| `ulysse-noir-blanc-700.webp` et `-480.webp` | « Qui suis-je ? » | 700 px et 480 px de large |
 | `illustration-communication.webp` | Bloc communication professionnelle | 900 px de large |
 | `og-ub-academy.jpg` | Image affichée quand on partage le lien (WhatsApp, Facebook…) | 1200 × 630 px |
 
@@ -91,15 +90,25 @@ Chaque photo existe en deux tailles (une petite pour les téléphones, une grand
 
 ---
 
-## 5. Changer la vidéo
+## 5. Changer une vidéo
 
-1. Votre vidéo doit être **verticale (9:16)**, au format **.mp4**, idéalement moins de 5 Mo.
-2. Renommez-la exactement : `ub-academy-20s-vertical.mp4`.
+Le site contient deux vidéos, toutes deux **verticales (9:16)** :
+
+| Vidéo | Où elle apparaît | Fichiers (dossier `assets/video/`) |
+|---|---|---|
+| Animation de 20 secondes (sans parole) | Section « UB Academy en 20 secondes », se lance seule, sans le son | `ub-academy-20s-vertical.mp4` + `.webm`, image d'attente `ub-academy-affiche.webp` |
+| Présentation d'Ulysse face caméra (1 min 13) | Section « Qui suis-je ? », se lance avec le son quand le visiteur appuie sur le bouton | `ulysse-presentation.mp4` + `.webm`, image d'attente `ulysse-presentation-affiche.webp` |
+
+Pour remplacer une vidéo :
+1. Préparez la nouvelle vidéo **verticale (9:16)**, au format **.mp4**, idéalement moins de 10 Mo.
+2. Renommez-la exactement comme l'ancienne (par exemple `ulysse-presentation.mp4`).
 3. Ouvrez le dossier `assets/video/`, **Add file → Upload files**, glissez la vidéo, **Commit changes**.
-4. Supprimez ensuite l'ancienne copie de secours `ub-academy-20s-vertical.webm` (ouvrez-la, menu **…** → **Delete file**) : sinon quelques rares navigateurs afficheraient encore l'ancienne vidéo.
-5. L'image affichée avant la lecture est `ub-academy-affiche.webp` (même dossier) : remplacez-la par une image de votre nouvelle vidéo si besoin.
+4. Supprimez ensuite l'ancienne copie de secours en `.webm` du même nom (ouvrez-la, menu **…** → **Delete file**) : sinon quelques rares navigateurs afficheraient encore l'ancienne vidéo.
+5. Remplacez si besoin l'image d'attente (`…-affiche.webp`) par une image de la nouvelle vidéo.
 
-La vidéo n'est jamais déformée ni coupée : elle s'adapte toute seule aux téléphones.
+Le plus simple reste d'envoyer la vidéo à Claude : il la compresse, crée l'image d'attente et l'installe.
+
+Les vidéos ne sont jamais déformées ni coupées : elles s'adaptent toutes seules aux téléphones.
 
 ---
 

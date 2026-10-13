@@ -79,7 +79,7 @@ var WHATSAPP_NUMERO = "212602431299";
   }
 
   /* ----- Vidéo : chargée et lancée (sans le son) seulement quand elle est visible ----- */
-  var video = document.querySelector(".video-cadre video");
+  var video = document.querySelector(".video-cadre:not(.video-parle) video");
   var mouvementReduit = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (video && "IntersectionObserver" in window && !mouvementReduit) {
     var lanceeParVisiteur = false;
@@ -95,6 +95,22 @@ var WHATSAPP_NUMERO = "212602431299";
       });
     }, { threshold: 0.5 }).observe(video);
   }
+
+  /* ----- Vidéo de présentation : lancée avec le son quand le visiteur le demande ----- */
+  document.querySelectorAll(".video-parle").forEach(function (cadre) {
+    var v = cadre.querySelector("video");
+    var bouton = cadre.querySelector(".video-parle__lecture");
+    if (!v || !bouton) return;
+    v.controls = false;
+    bouton.hidden = false;
+    function afficherCommandes() { bouton.hidden = true; v.controls = true; }
+    bouton.addEventListener("click", function () {
+      afficherCommandes();
+      var p = v.play();
+      if (p && p.catch) p.catch(function () {});
+    });
+    v.addEventListener("play", afficherCommandes);
+  });
 
   /* ----- Formulaire de contact ----- */
   var form = document.getElementById("formulaire-contact");

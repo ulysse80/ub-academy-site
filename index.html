@@ -327,9 +327,18 @@
     <!-- ===================== 8. À PROPOS ===================== -->
     <section class="section section--marine" id="a-propos" aria-labelledby="titre-apropos">
       <div class="conteneur apropos">
-        <div class="apropos__photo revele">
-          <img src="assets/img/ulysse-noir-blanc-700.webp" srcset="assets/img/ulysse-noir-blanc-480.webp 480w, assets/img/ulysse-noir-blanc-700.webp 700w" sizes="(min-width: 900px) 380px, 90vw" width="700" height="942" loading="lazy" decoding="async" alt="Portrait en noir et blanc d'Ulysse Bordereau">
-        </div>
+        <figure class="apropos__video revele">
+          <!-- Vidéo de présentation d'Ulysse (1 min 13, sous-titrée). Pour la changer : remplacez
+               assets/video/ulysse-presentation.mp4 (vertical 9:16) et supprimez ulysse-presentation.webm. -->
+          <div class="video-cadre video-parle">
+            <video controls playsinline preload="none" poster="assets/video/ulysse-presentation-affiche.webp" width="720" height="1280" aria-label="Ulysse Bordereau présente UB Academy (vidéo de 1 min 13, sous-titrée en français)">
+              <source src="assets/video/ulysse-presentation.mp4" type="video/mp4">
+              <source src="assets/video/ulysse-presentation.webm" type="video/webm">
+            </video>
+            <button class="video-parle__lecture" type="button" hidden><span class="video-parle__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>Voir ma présentation · 1 min</button>
+          </div>
+          <figcaption>Je me présente en une minute, sous-titres en français.</figcaption>
+        </figure>
         <div class="apropos__texte revele">
           <span class="surtitre">À propos</span>
           <h2 id="titre-apropos">Qui suis-je ?</h2>

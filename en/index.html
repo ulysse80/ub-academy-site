@@ -327,9 +327,18 @@
     <!-- ===================== 8. ABOUT ===================== -->
     <section class="section section--marine" id="a-propos" aria-labelledby="titre-apropos">
       <div class="conteneur apropos">
-        <div class="apropos__photo revele">
-          <img src="../assets/img/ulysse-noir-blanc-700.webp" srcset="../assets/img/ulysse-noir-blanc-480.webp 480w, ../assets/img/ulysse-noir-blanc-700.webp 700w" sizes="(min-width: 900px) 380px, 90vw" width="700" height="942" loading="lazy" decoding="async" alt="Black and white portrait of Ulysse Bordereau">
-        </div>
+        <figure class="apropos__video revele">
+          <!-- Ulysse's introduction video (1 min 13, subtitled). To change it: replace
+               assets/video/ulysse-presentation.mp4 (vertical 9:16) and delete ulysse-presentation.webm. -->
+          <div class="video-cadre video-parle">
+            <video controls playsinline preload="none" poster="../assets/video/ulysse-presentation-affiche.webp" width="720" height="1280" aria-label="Ulysse Bordereau introduces UB Academy (1 min 13 video, in French with French subtitles)">
+              <source src="../assets/video/ulysse-presentation.mp4" type="video/mp4">
+              <source src="../assets/video/ulysse-presentation.webm" type="video/webm">
+            </video>
+            <button class="video-parle__lecture" type="button" hidden><span class="video-parle__icone" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></span>Watch my introduction · 1 min</button>
+          </div>
+          <figcaption>A one-minute introduction, in French with French subtitles.</figcaption>
+        </figure>
         <div class="apropos__texte revele">
           <span class="surtitre">About</span>
           <h2 id="titre-apropos">Who am I?</h2>

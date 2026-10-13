@@ -300,8 +300,19 @@ p { margin: 0 0 1em; }
 
 /* ---------- À propos ---------- */
 .apropos { display: grid; gap: 36px; align-items: center; }
-.apropos__photo { max-width: 380px; width: 100%; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .7); aspect-ratio: 762 / 1025; background: #222; }
-.apropos__photo img { width: 100%; height: 100%; object-fit: cover; }
+.apropos__video { margin: 0; display: grid; gap: 14px; justify-items: center; }
+.apropos__video figcaption { font-size: .9rem; color: #9fb0d3; text-align: center; max-width: 340px; }
+.video-parle { position: relative; }
+.video-parle__lecture {
+  position: absolute; left: 50%; bottom: 6%; transform: translateX(-50%);
+  display: inline-flex; align-items: center; gap: 10px; white-space: nowrap;
+  padding: 8px 20px 8px 8px; border: 0; border-radius: 999px; cursor: pointer;
+  background: var(--orange); color: var(--marine); font: 700 1rem/1.2 var(--sans);
+  box-shadow: 0 12px 28px -10px rgba(0, 0, 0, .6); transition: background .15s ease, transform .15s ease;
+}
+.video-parle__lecture:hover { background: #ff9233; transform: translateX(-50%) scale(1.03); }
+.video-parle__icone { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--marine); color: var(--orange); }
+.video-parle__icone svg { width: 18px; height: 18px; margin-left: 2px; }
 .apropos__texte p { color: #c8d0e2; font-size: 1.06rem; }
 .apropos__signature { font-family: var(--serif); font-style: italic; font-size: 1.4rem; color: #fff; margin: 6px 0 24px; }
 .apropos__signature span { display: block; font-family: var(--sans); font-style: normal; font-size: .82rem; letter-spacing: .14em; text-transform: uppercase; color: var(--orange); margin-top: 4px; }

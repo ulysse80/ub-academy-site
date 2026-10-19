@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ulysse80.github.io/ub-academy-site/sitemap.xml
+Sitemap: https://domaine-a-renseigner.invalid/sitemap.xml

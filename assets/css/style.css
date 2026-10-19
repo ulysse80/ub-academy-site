@@ -320,6 +320,8 @@ p { margin: 0 0 1em; }
   background: var(--orange); color: var(--marine); font: 700 1rem/1.2 var(--sans);
   box-shadow: 0 12px 28px -10px rgba(0, 0, 0, .6); transition: background .15s ease, transform .15s ease;
 }
+.video-parle__lecture[hidden] { display: none; }
+.video-indisponible { margin: 0; max-width: 340px; text-align: center; font-size: .95rem; color: #fff; background: rgba(255, 255, 255, .08); border-radius: 12px; padding: 10px 14px; }
 .video-parle__lecture:hover { background: #ff9233; transform: translateX(-50%) scale(1.03); }
 .video-parle__icone { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--marine); color: var(--orange); }
 .video-parle__icone svg { width: 18px; height: 18px; margin-left: 2px; }

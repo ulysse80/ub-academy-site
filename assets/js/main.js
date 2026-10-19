@@ -24,7 +24,8 @@ var WHATSAPP_NUMERO = "212602431299";
       erreur: "L'envoi n'a pas fonctionné. Envoyez-moi plutôt votre message, déjà rédigé, sur",
       sansCle: "Je vous ouvre WhatsApp avec votre message déjà rédigé : il ne reste qu'à l'envoyer.",
       entete: "Bonjour Ulysse, je vous écris depuis le site UB Academy.",
-      nom: "Nom", tel: "Téléphone", email: "E-mail", sujet: "Sujet", message: "Message"
+      nom: "Nom", tel: "Téléphone", email: "E-mail", sujet: "Sujet", message: "Message",
+      videoKO: "La vidéo ne peut pas être lue pour le moment. Vous pouvez m'écrire directement sur WhatsApp."
     },
     en: {
       envoi: "Sending…",
@@ -32,7 +33,8 @@ var WHATSAPP_NUMERO = "212602431299";
       erreur: "Sending failed. Please send me your message, already written, on",
       sansCle: "I'm opening WhatsApp with your message already written. Just press send.",
       entete: "Hi Ulysse, I'm writing from the UB Academy website.",
-      nom: "Name", tel: "Phone", email: "Email", sujet: "Subject", message: "Message"
+      nom: "Name", tel: "Phone", email: "Email", sujet: "Subject", message: "Message",
+      videoKO: "The video can't be played right now. You can message me directly on WhatsApp."
     }
   }[langue];
 
@@ -96,6 +98,16 @@ var WHATSAPP_NUMERO = "212602431299";
     }, { threshold: 0.5 }).observe(video);
   }
 
+  /* ----- Vidéo qui ne se charge pas : on garde l'image d'attente, sans lecteur cassé ----- */
+  function siVideoIndisponible(v, action) {
+    var sources = v.querySelectorAll("source");
+    var derniere = sources[sources.length - 1];
+    function echec() { v.controls = false; if (action) action(); }
+    if (derniere) derniere.addEventListener("error", echec);
+    v.addEventListener("error", echec);
+  }
+  document.querySelectorAll(".video-cadre:not(.video-parle) video").forEach(function (v) { siVideoIndisponible(v); });
+
   /* ----- Vidéo de présentation : lancée avec le son quand le visiteur le demande ----- */
   document.querySelectorAll(".video-parle").forEach(function (cadre) {
     var v = cadre.querySelector("video");
@@ -110,6 +122,16 @@ var WHATSAPP_NUMERO = "212602431299";
       if (p && p.catch) p.catch(function () {});
     });
     v.addEventListener("play", afficherCommandes);
+    siVideoIndisponible(v, function () {
+      bouton.hidden = true;
+      if (!cadre.parentNode.querySelector(".video-indisponible")) {
+        var info = document.createElement("p");
+        info.className = "video-indisponible";
+        info.setAttribute("role", "status");
+        info.textContent = TEXTES.videoKO;
+        cadre.insertAdjacentElement("afterend", info);
+      }
+    });
   });
 
   /* ----- Formulaire de contact ----- */
@@ -164,10 +186,14 @@ var WHATSAPP_NUMERO = "212602431299";
 
     envoyer.disabled = true;
     afficher(TEXTES.envoi, "ok");
+    // Si le service ne répond pas en 15 secondes, on abandonne et on propose WhatsApp
+    var controle = window.AbortController ? new AbortController() : null;
+    var minuterie = setTimeout(function () { if (controle) controle.abort(); }, 15000);
     fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify(donnees)
+      body: JSON.stringify(donnees),
+      signal: controle ? controle.signal : undefined
     })
       .then(function (r) { return r.json(); })
       .then(function (r) {
@@ -175,6 +201,6 @@ var WHATSAPP_NUMERO = "212602431299";
         else { throw new Error("échec"); }
       })
       .catch(function () { afficher(TEXTES.erreur, "erreur", lienWhatsApp()); })
-      .then(function () { envoyer.disabled = false; });
+      .then(function () { clearTimeout(minuterie); envoyer.disabled = false; });
   });
 })();

@@ -4,7 +4,7 @@
 
 Ce guide explique comment changer vous-même un texte, une photo, la vidéo ou un numéro, **directement sur github.com**, sans rien installer.
 
-Chaque modification enregistrée est mise en ligne automatiquement en 1 à 2 minutes (une fois GitHub Pages activé — voir la dernière partie).
+Important : le site sera hébergé chez Hostinger par un ami (voir `GUIDE-HOSTINGER.md`). Une modification faite sur github.com n'apparaît donc **pas** automatiquement en ligne : il faut ensuite envoyer le ou les fichiers modifiés à la personne qui gère l'hébergement (ou demander à Claude une nouvelle archive).
 
 ---
 
@@ -151,14 +151,8 @@ Personne d'autre que vous ne voit cette copie. Il faut une connexion internet po
 
 ---
 
-## 9. Mettre le site en ligne (GitHub Pages)
+## 9. Mettre le site en ligne
 
-À faire une seule fois, après avoir validé la pull request :
+Le site sera hébergé chez **Hostinger** par un ami. Tout est expliqué dans `GUIDE-HOSTINGER.md` : quels fichiers envoyer, où les mettre, quoi configurer une fois le domaine connu et quels tests faire.
 
-1. Sur la page du dépôt, cliquez sur **Settings** (Paramètres).
-2. Dans le menu de gauche, cliquez sur **Pages**.
-3. Sous **Build and deployment** → **Source**, choisissez **Deploy from a branch**.
-4. Sous **Branch**, choisissez **main** et le dossier **/ (root)**, puis **Save**.
-5. Attendez 1 à 2 minutes et rechargez la page : l'adresse du site s'affiche en haut (`https://ulysse80.github.io/ub-academy-site/`).
-
-Si vous prenez plus tard un nom de domaine (ex. `ubacademy.com`), demandez à Claude de mettre à jour les adresses dans `index.html`, `en/index.html`, `sitemap.xml` et `robots.txt`.
+L'archive à lui transmettre se fabrique avec `outils/preparer-archive-hostinger.py` : demandez simplement à Claude « prépare l'archive Hostinger avec le domaine https://… ».

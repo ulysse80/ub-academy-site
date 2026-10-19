@@ -9,3 +9,5 @@ exclude:
   - "PROMPT A COLLER DANS CLAUDE CODE.txt"
   - README.md
   - captures-revue
+  - outils
+  - GUIDE-HOSTINGER.md

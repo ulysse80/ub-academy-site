@@ -99,9 +99,10 @@ def main():
         print("\n".join("  - " + e for e in erreurs))
         sys.exit(1)
 
+    maintenant = datetime.datetime.now().timetuple()[:6]
     with zipfile.ZipFile(a.sortie, "w", zipfile.ZIP_DEFLATED) as z:
         for f in sorted(contenus):
-            info = zipfile.ZipInfo(f, date_time=(2026, 1, 1, 0, 0, 0))
+            info = zipfile.ZipInfo(f, date_time=maintenant)  # date réelle : les caches voient les mises à jour
             info.external_attr = 0o644 << 16
             info.compress_type = zipfile.ZIP_DEFLATED
             z.writestr(info, contenus[f])

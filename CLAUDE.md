@@ -40,10 +40,11 @@ Ce dépôt contient le nouveau site vitrine d'UB Academy. Lis ce fichier et TOUT
 - Pas de superlatifs sans preuve (« le meilleur », « révolutionnaire »).
 - **Aucun grand tiret (— ou –) dans les textes visibles du site** : Ulysse trouve que ça « fait IA ». Utiliser une virgule, deux-points ou un point. Horaires écrits « de 10 h à 12 h ».
 - Blocs de cours : drapeau + nom de la langue (pas de slogan du type « Je parle. »).
-- Ne rien publier (GitHub Pages ou autre) avant qu'Ulysse ait vu le site et donné son accord explicite.
+- Ne rien publier (GitHub Pages, Hostinger ou autre) avant qu'Ulysse ait vu le site et donné son accord explicite.
+- **Hébergement décidé : Hostinger, géré par un ami d'Ulysse.** Pas de GitHub Pages. Ne pas fusionner la PR #1 sans accord, n'activer aucun hébergement, ne toucher ni au domaine ni au DNS.
 
 ## Technique
-- Site **statique** (HTML/CSS/JS, sans framework lourd), une page par langue (`index.html` = FR, `en/index.html` = EN), publiable sur **GitHub Pages** sans étape de build.
+- Site **statique** (HTML/CSS/JS, sans framework lourd), une page par langue (`index.html` = FR, `en/index.html` = EN), hébergé tel quel sur **Hostinger** (fichiers dans `public_html`, sans étape de build). Tous les chemins internes restent **relatifs**. Les adresses complètes (canonical, hreflang, Open Graph, sitemap, robots) utilisent le repère `https://domaine-a-renseigner.invalid` tant que le domaine n'est pas connu. L'archive se fabrique avec `outils/preparer-archive-hostinger.py --domaine https://…` ; guide de l'hébergeur : `GUIDE-HOSTINGER.md`.
 - Mobile d'abord, rapide (images WebP compressées, chargement différé), accessible (contrastes, textes alternatifs).
 - SEO : titre, description, Open Graph, balises `hreflang` FR/EN, `sitemap.xml`, `robots.txt`.
 - Ajoute un fichier `MODIFIER-LE-SITE.md` expliquant en français simple, sans jargon, comment Ulysse change un texte, une photo, la vidéo ou un numéro directement depuis github.com.

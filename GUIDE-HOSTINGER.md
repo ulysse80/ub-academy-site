@@ -31,6 +31,8 @@ assets/video/           les 2 vidéos (MP4 + WebM) et leurs images d'attente
 
 ## 2. La seule information qui manque : l'adresse du site
 
+C'est Ulysse qui choisit le nom de domaine. Toi, tu le relies à l'hébergement.
+
 Le site contient un repère **`https://domaine-a-renseigner.invalid`** (39 fois, dans 6 fichiers). Il faudra le remplacer par l'adresse définitive du site.
 
 Le site fonctionne sans ce remplacement : pages, boutons, vidéos et formulaire marchent. Mais le repère sert à quatre choses :
@@ -41,7 +43,7 @@ Le site fonctionne sans ce remplacement : pages, boutons, vidéos et formulaire 
 
 Deux façons de faire :
 
-- **Option A, la plus simple.** Envoie à Ulysse l'adresse exacte, avec `https://`, en précisant si elle commence par `www` ou non (par exemple `https://www.ubacademy.ma`). Il te renvoie une archive finale déjà corrigée. Tu sautes alors l'étape 4.3.
+- **Option A, la plus simple.** Une fois le domaine relié, dis à Ulysse l'adresse exacte qui s'affiche dans le navigateur, avec ou sans `www` (par exemple `https://ubacademy.ma`). Il te renvoie une archive finale déjà corrigée. Tu sautes alors l'étape 4.3.
 - **Option B.** Tu envoies l'archive actuelle, puis tu fais le remplacement toi-même (étape 4.3).
 
 ---
@@ -80,9 +82,11 @@ Ne renomme aucun fichier ni dossier : le serveur fait la différence entre majus
 
 ---
 
-## 5. Les tests à faire après la mise en ligne
+## 5. Les tests après la mise en ligne
 
-Fais-les sur un ordinateur **et** sur un téléphone, de préférence un **iPhone avec Safari**.
+**C'est Ulysse qui fait ces tests.** De ton côté, vérifie seulement que les pages s'affichent avec le cadenas HTTPS (test 1), puis préviens-le que le site est en ligne. S'il signale un problème lié à l'hébergement, la partie 6 indique quoi faire.
+
+Les tests se font sur un ordinateur **et** sur un téléphone, de préférence un **iPhone avec Safari**.
 
 | # | Test | Comment | Résultat attendu |
 |---|------|---------|------------------|
@@ -92,12 +96,12 @@ Fais-les sur un ordinateur **et** sur un téléphone, de préférence un **iPhon
 | 4 | Images | Fais défiler toute la page | Photos d'Ulysse, drapeaux, logo et illustration visibles, aucune image cassée |
 | 5 | Vidéo animée (20 s) | Descends jusqu'à « UB Academy en 20 secondes » | Elle se lance **seule, sans le son**, et tourne en boucle |
 | 6 | **Vidéo de présentation sur iPhone** | Section « Qui suis-je ? », bouton orange **« Voir ma présentation · 1 min »** | Elle démarre **avec le son**, dans la page. On peut la mettre en plein écran et elle se lit jusqu'à la fin (1 min 13) |
-| 7 | **WhatsApp** | Sur téléphone, appuie sur « Discuter sur WhatsApp » (haut de page), « Commencer le chinois » (bloc chinois) et le rond vert en bas à droite | WhatsApp s'ouvre sur la conversation avec **+212 602 431 299**, avec un **message déjà écrit**, différent selon le bouton. N'envoie rien, sauf si Ulysse est prévenu |
-| 8 | **Formulaire Web3Forms** | En bas de page. Nom : `TEST Hostinger`, téléphone : `+212 600 000 000`, e-mail : **ton adresse**, message : `Test de mise en ligne, ne pas traiter`. Puis « Envoyer ma demande ». Refais-le sur `/en/` | Un message vert « Merci ! … » s'affiche et le formulaire se vide. **Ulysse reçoit un e-mail** dans la boîte liée à son formulaire Web3Forms (normalement ubacademyofficial@gmail.com, spams compris), avec l'objet « UB Academy \| … ». En répondant à cet e-mail, il t'écrit à ton adresse |
+| 7 | **WhatsApp** | Sur téléphone, appuie sur « Discuter sur WhatsApp » (haut de page), « Commencer le chinois » (bloc chinois) et le rond vert en bas à droite | WhatsApp s'ouvre sur la conversation avec **+212 602 431 299**, avec un **message déjà écrit**, différent selon le bouton. Pas besoin d'envoyer le message |
+| 8 | **Formulaire Web3Forms** | En bas de page. Nom : `TEST Hostinger`, téléphone : `+212 600 000 000`, e-mail : **une adresse personnelle**, message : `Test de mise en ligne, ne pas traiter`. Puis « Envoyer ma demande ». Refais-le sur `/en/` | Un message vert « Merci ! … » s'affiche et le formulaire se vide. **Ulysse reçoit un e-mail** dans la boîte liée à son formulaire Web3Forms (normalement ubacademyofficial@gmail.com, spams compris), avec l'objet « UB Academy \| … ». En répondant à cet e-mail, on écrit à l'adresse saisie dans le formulaire |
 | 9 | Aperçu du lien | Colle l'adresse du site dans une conversation WhatsApp | Un aperçu apparaît avec la photo d'Ulysse et le titre. Cela ne marche qu'après le remplacement du repère, et WhatsApp peut mettre quelques heures à le rafraîchir |
 | 10 | Fichiers Google | Ouvre `/robots.txt` et `/sitemap.xml` | Les deux s'affichent avec la bonne adresse, sans le repère `domaine-a-renseigner` |
 
-Envoie à Ulysse le résultat des tests 6, 7 et 8 : ce sont les plus importants.
+Les plus importants sont les tests 6, 7 et 8.
 
 ---
 

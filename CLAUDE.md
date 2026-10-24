@@ -49,3 +49,4 @@ Ce dépôt contient le nouveau site vitrine d'UB Academy. Lis ce fichier et TOUT
 - SEO : titre, description, Open Graph, balises `hreflang` FR/EN, `sitemap.xml`, `robots.txt`.
 - Ajoute un fichier `MODIFIER-LE-SITE.md` expliquant en français simple, sans jargon, comment Ulysse change un texte, une photo, la vidéo ou un numéro directement depuis github.com.
 - Ne publie rien, n'achète rien, ne change aucun domaine sans l'accord explicite d'Ulysse.
+- **Prototype 3D** (`prototype-3d/`, Blender) : animation « Trois langues, une direction », hors du site. Ne pas l'intégrer ni remplacer une vidéo existante sans accord explicite d'Ulysse. Proposition prête dans `prototype-3d/integration/`.

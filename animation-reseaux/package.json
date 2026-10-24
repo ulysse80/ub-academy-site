@@ -1,0 +1,14 @@
+{
+  "name": "ub-academy-animation-reseaux",
+  "private": true,
+  "description": "Animation 3D UB Academy (Three.js), 10 s, format vertical 9:16 pour les réseaux sociaux",
+  "scripts": {
+    "construire": "esbuild src/animation.js --bundle --minify --format=iife --target=es2020 --loader:.png=dataurl --loader:.woff2=dataurl --outfile=animation.js",
+    "capturer": "node outils/capture.cjs",
+    "encoder": "sh outils/encoder.sh"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "three": "0.185.1"
+  }
+}

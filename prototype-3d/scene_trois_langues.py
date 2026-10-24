@@ -481,7 +481,7 @@ def rendre(sc, a):
         sc.render.ffmpeg.codec = "H264"
         sc.render.ffmpeg.constant_rate_factor = "HIGH"
         sc.render.ffmpeg.audio_codec = "NONE"
-        sc.render.filepath = os.path.join(a.sortie, "ub-academy-trois-langues.mp4")
+        sc.render.filepath = os.path.join(a.sortie, "ub-academy-trois-langues-blender.mp4")  # ne remplace pas la version web
         bpy.ops.render.render(animation=True)
 
 

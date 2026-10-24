@@ -11,12 +11,12 @@ mkdir -p "$SORTIE"
 
 # MP4 : H.264 High, yuv420p, sans piste son, « faststart » (lecture avant la fin du téléchargement)
 ffmpeg -y -loglevel error -framerate 30 -i "$IMAGES/%04d.png" \
-  -c:v libx264 -preset veryslow -crf "${CRF:-24}" -profile:v high -level 4.0 -pix_fmt yuv420p \
+  -c:v libx264 -preset veryslow -crf "${CRF:-20}" -profile:v high -level 4.0 -pix_fmt yuv420p \
   -movflags +faststart -an "$SORTIE/$NOM.mp4"
 
 # WebM : VP9, sans piste son
 ffmpeg -y -loglevel error -framerate 30 -i "$IMAGES/%04d.png" \
-  -c:v libvpx-vp9 -b:v 0 -crf "${CRF_VP9:-34}" -row-mt 1 -deadline good -cpu-used 1 -pix_fmt yuv420p \
+  -c:v libvpx-vp9 -b:v 0 -crf "${CRF_VP9:-30}" -row-mt 1 -deadline good -cpu-used 1 -pix_fmt yuv420p \
   -an "$SORTIE/$NOM.webm"
 
 # Image d'attente : la composition finale complète (logo, colonne, fil), avant l'éclat lumineux

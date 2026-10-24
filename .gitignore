@@ -1,3 +1,4 @@
 *.zip
 prototype-3d/rendu/images/
 *.blend1
+__pycache__/

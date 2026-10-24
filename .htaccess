@@ -1,0 +1,24 @@
+# UB Academy : réglages du serveur (Hostinger / LiteSpeed / Apache).
+# Fichier facultatif. Si le site affiche « Internal Server Error » juste après
+# la mise en ligne, renommer ce fichier en « htaccess-desactive.txt ».
+
+# Ne jamais afficher la liste des fichiers d'un dossier (ex. /assets/)
+Options -Indexes
+
+# Types des images et des vidéos (nécessaire à la lecture sur iPhone)
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType video/mp4 .mp4
+  AddType video/webm .webm
+  AddCharset utf-8 .html .css .js .xml .txt
+</IfModule>
+
+# Garder images et vidéos en mémoire chez le visiteur (chargement plus rapide)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType video/mp4 "access plus 30 days"
+  ExpiresByType video/webm "access plus 30 days"
+</IfModule>

@@ -1,0 +1,15 @@
+Polices utilisées pour le rendu 3D (elles ne sont pas envoyées sur le site)
+
+inter-extrabold.ttf
+  Inter, graisse ExtraBold (800), téléchargée depuis Google Fonts.
+  Licence : SIL Open Font License 1.1, voir OFL-inter.txt.
+  Sert aux mots « FR » et « EN » (la même famille que les titres du site).
+
+noto-sans-sc-extrabold-zhongwen.ttf
+  Noto Sans SC, graisse ExtraBold (800), sous-ensemble fourni par Google Fonts
+  qui ne contient que les deux caractères 中 et 文.
+  Licence : SIL Open Font License 1.1, voir OFL-noto-sans-sc.txt.
+  Sert au mot « 中文 ».
+
+Ces polices sont libres d'utilisation, y compris commerciale. Les textes de
+licence doivent rester à côté des fichiers de police.

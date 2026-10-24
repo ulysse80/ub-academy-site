@@ -1,0 +1,6 @@
+*.zip
+prototype-3d/rendu/images/
+*.blend1
+__pycache__/
+animation-reseaux/node_modules/
+animation-reseaux/rendu/images-*/

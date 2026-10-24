@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Prototype 3D UB Academy</title>
+<style>
+  :root { --marine: #04142e; --marine-2: #0e2d66; --creme: #f6f0e6; --orange: #ff8114; --texte: #1a2338; --doux: #4a5470; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--creme); color: var(--texte); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: clamp(1.6rem, 5vw, 2.3rem); margin: 0 0 6px; color: var(--marine); }
+  h2 { font-size: 1.25rem; margin: 40px 0 12px; color: var(--marine); }
+  .statut { display: inline-block; background: var(--marine); color: #fff; border-radius: 999px; padding: 4px 14px; font-size: .9rem; font-weight: 700; }
+  .statut b { color: var(--orange); }
+  .videos { display: grid; gap: 28px; grid-template-columns: 1fr; margin-top: 24px; }
+  @media (min-width: 720px) { .videos { grid-template-columns: 1fr 1fr; } }
+  figure { margin: 0; }
+  .cadre { width: min(100%, 320px); aspect-ratio: 9 / 16; margin: 0 auto; border-radius: 22px; overflow: hidden; background: var(--marine); box-shadow: 0 24px 48px -26px rgba(4, 20, 46, .6); }
+  .cadre video, .cadre img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  figcaption { text-align: center; margin-top: 12px; font-weight: 700; }
+  figcaption span { display: block; font-weight: 400; color: var(--doux); font-size: .92rem; }
+  table { border-collapse: collapse; width: 100%; font-size: .95rem; background: #fff; border-radius: 12px; overflow: hidden; }
+  th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid #e3dccd; vertical-align: top; }
+  th { background: #efe6d6; }
+  .planche { width: 100%; height: auto; border-radius: 12px; display: block; }
+  .reco { background: #fff; border-left: 4px solid var(--orange); padding: 16px 20px; border-radius: 0 12px 12px 0; }
+  .tableau { overflow-x: auto; }
+  code { background: #efe6d6; padding: 1px 6px; border-radius: 6px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Prototype 3D : « Trois langues, une direction »</h1>
+  <p class="statut">Statut : <b>rendu et vérifié</b> avec Blender 5.2.3 LTS</p>
+  <p>Page de travail, non publiée, pour comparer le prototype 3D à l'animation actuelle du site. Rien n'a été changé sur le site.</p>
+
+  <div class="videos">
+    <figure>
+      <div class="cadre">
+        <video controls muted loop playsinline autoplay preload="metadata" poster="../assets/video/ub-academy-affiche.webp" width="720" height="1280">
+          <source src="../assets/video/ub-academy-20s-vertical.mp4" type="video/mp4">
+          <source src="../assets/video/ub-academy-20s-vertical.webm" type="video/webm">
+        </video>
+      </div>
+      <figcaption>Animation actuelle du site<span>20 s · 2D · porte le message (cours en direct, objectifs, contact)</span></figcaption>
+    </figure>
+    <figure>
+      <div class="cadre">
+        <video controls muted loop playsinline autoplay preload="metadata" poster="rendu/ub-academy-trois-langues-affiche.webp" width="720" height="1280">
+          <source src="rendu/ub-academy-trois-langues.mp4" type="video/mp4">
+          <source src="rendu/ub-academy-trois-langues.webm" type="video/webm">
+        </video>
+      </div>
+      <figcaption>Prototype 3D Blender<span>8 s en boucle · 3D · image de marque, sans phrase</span></figcaption>
+    </figure>
+  </div>
+
+  <h2>Les images clés</h2>
+  <img class="planche" src="rendu/planche-images-cles.webp" width="1600" height="306" alt="Neuf images de l'animation 3D, de gauche à droite : fond marine, arrivée des tuiles FR, EN et 中文, alignement en colonne, arrivée du logo UB Academy, fil orange qui relie les trois points au logo, retour au marine.">
+
+  <h2>Comparaison honnête</h2>
+  <div class="tableau">
+  <table>
+    <tr><th></th><th>Animation actuelle (20 s)</th><th>Prototype 3D (8 s)</th></tr>
+    <tr><td>Ce qu'elle dit</td><td>Cours en direct, correction, objectifs, invitation à écrire</td><td>Trois langues, une seule académie. Aucun argument, aucune phrase</td></tr>
+    <tr><td>Ressenti</td><td>Clair, pédagogique, éditorial</td><td>Premium, matière, lumière, profondeur</td></tr>
+    <tr><td>Poids (MP4)</td><td>0,80 Mo pour 20 s</td><td>0,74 Mo pour 8 s</td></tr>
+    <tr><td>Format idéal</td><td>Site (section « en 20 secondes »)</td><td>Réseaux sociaux (statut WhatsApp, Reels, Stories), en option sur le site</td></tr>
+  </table>
+  </div>
+
+  <h2>Recommandation</h2>
+  <div class="reco">
+    <p><strong>Ne pas remplacer l'animation de 20 s, ni l'y insérer.</strong> Elle seule explique l'offre ; la 3D ne fait que la mettre en scène. Coller les 8 s de 3D devant retarderait le message, et les deux styles (2D et 3D) se heurteraient.</p>
+    <p><strong>Usage conseillé :</strong> réseaux sociaux, où un 9:16 de 8 s en boucle est le format natif. Sur le site, seulement si vous l'aimez : en petit, à côté du titre de la section « Les cours », sur ordinateur uniquement. La proposition est prête dans <code>integration/</code>, non activée.</p>
+  </div>
+</main>
+</body>
+</html>

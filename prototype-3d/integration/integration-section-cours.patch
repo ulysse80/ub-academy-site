@@ -1,0 +1,121 @@
+diff --git a/assets/css/style.css b/assets/css/style.css
+index 006476c..e44b8c4 100644
+--- a/assets/css/style.css
++++ b/assets/css/style.css
+@@ -224,6 +224,33 @@ p { margin: 0 0 1em; }
+   .video-bloc { grid-template-columns: 380px 1fr; gap: 72px; }
+ }
+ 
++/* ---------- Animation 3D décorative (section Cours) ---------- */
++/* Sur téléphone, elle n'est ni affichée ni téléchargée : le chemin vers les cours et WhatsApp reste court. */
++.video-3d { display: none; }
++@media (min-width: 900px) {
++  /* Texte à gauche, centré en hauteur ; animation à droite */
++  .entete-section--3d { display: grid; grid-template-columns: 1fr 230px; grid-template-rows: 1fr auto auto auto 1fr; column-gap: 64px; }
++  .entete-section--3d > :not(.video-3d) { grid-column: 1; }
++  .entete-section--3d .surtitre { grid-row: 2; justify-self: start; }
++  .entete-section--3d h2 { grid-row: 3; }
++  .entete-section--3d .intro { grid-row: 4; }
++  .video-3d {
++    display: block; position: relative; grid-column: 2; grid-row: 1 / -1;
++    width: 230px; aspect-ratio: 9 / 16; border-radius: 22px; overflow: hidden; background: var(--marine);
++    box-shadow: 0 30px 60px -30px rgba(4, 20, 46, .55);
++  }
++  .video-3d video { width: 100%; height: 100%; object-fit: contain; display: block; }
++}
++.video-3d__pause[hidden] { display: none; }
++.video-3d__pause {
++  position: absolute; right: 12px; bottom: 12px; width: 40px; height: 40px; border-radius: 50%;
++  display: grid; place-items: center; border: 1px solid rgba(255, 255, 255, .35); cursor: pointer;
++  background: rgba(4, 20, 46, .6); color: #fff;
++}
++.video-3d__pause svg { width: 18px; height: 18px; }
++.video-3d__icone-lecture, .video-3d__pause[aria-pressed="true"] .video-3d__icone-pause { display: none; }
++.video-3d__pause[aria-pressed="true"] .video-3d__icone-lecture { display: block; }
++
+ /* ---------- Cartes « Pourquoi » ---------- */
+ .cartes { display: grid; gap: 18px; }
+ .carte {
+diff --git a/assets/js/main.js b/assets/js/main.js
+index 7419608..dea2d74 100644
+--- a/assets/js/main.js
++++ b/assets/js/main.js
+@@ -108,6 +108,30 @@ var WHATSAPP_NUMERO = "212602431299";
+   }
+   document.querySelectorAll(".video-cadre:not(.video-parle) video").forEach(function (v) { siVideoIndisponible(v); });
+ 
++  /* ----- Animation 3D décorative (section Cours) : sans le son, seulement quand elle est visible ----- */
++  /* Si le visiteur préfère moins d'animations, l'image d'attente reste affichée. */
++  document.querySelectorAll(".video-3d").forEach(function (cadre) {
++    var v = cadre.querySelector("video");
++    var bouton = cadre.querySelector(".video-3d__pause");
++    if (!v || mouvementReduit || !("IntersectionObserver" in window)) return;
++    var enPause = false;
++    function lire() { var p = v.play(); if (p && p.catch) p.catch(function () {}); }
++    if (bouton) {
++      bouton.hidden = false;
++      bouton.addEventListener("click", function () {
++        enPause = !enPause;
++        bouton.setAttribute("aria-pressed", enPause ? "true" : "false");
++        if (enPause) v.pause(); else lire();
++      });
++    }
++    new IntersectionObserver(function (entrees) {
++      entrees.forEach(function (en) {
++        if (en.isIntersecting && !enPause) lire(); else v.pause();
++      });
++    }, { threshold: 0.5 }).observe(v);
++    siVideoIndisponible(v, function () { if (bouton) bouton.hidden = true; });
++  });
++
+   /* ----- Vidéo de présentation : lancée avec le son quand le visiteur le demande ----- */
+   document.querySelectorAll(".video-parle").forEach(function (cadre) {
+     var v = cadre.querySelector("video");
+diff --git a/en/index.html b/en/index.html
+index fa6c939..fafeb92 100644
+--- a/en/index.html
++++ b/en/index.html
+@@ -211,10 +211,18 @@
+     <!-- ===================== 4-5-6. COURSES ===================== -->
+     <section class="section section--creme" id="cours" aria-labelledby="titre-cours">
+       <div class="conteneur">
+-        <div class="entete-section">
++        <div class="entete-section entete-section--3d">
+           <span class="surtitre">Courses</span>
+           <h2 id="titre-cours">Pick your language, I'll take care of the rest</h2>
+           <p class="intro">Three languages, one-on-one or group lessons, and professional communication coaching. Message me in one click from the block that fits you.</p>
++          <!-- Decorative 3D animation (8 s, looping, no sound), shown on computers. Files: assets/video/ub-academy-3d-langues.mp4, .webm and the image ub-academy-3d-langues-affiche.webp -->
++          <div class="video-3d">
++            <video muted loop playsinline preload="none" poster="../assets/video/ub-academy-3d-langues-affiche.webp" width="720" height="1280" aria-hidden="true" tabindex="-1">
++              <source src="../assets/video/ub-academy-3d-langues.mp4" type="video/mp4">
++              <source src="../assets/video/ub-academy-3d-langues.webm" type="video/webm">
++            </video>
++            <button class="video-3d__pause" type="button" aria-label="Pause the animation" aria-pressed="false" hidden><svg class="video-3d__icone-pause" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg><svg class="video-3d__icone-lecture" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></button>
++          </div>
+         </div>
+ 
+         <div class="cours-liste">
+diff --git a/index.html b/index.html
+index b37212d..20accfa 100644
+--- a/index.html
++++ b/index.html
+@@ -211,10 +211,18 @@
+     <!-- ===================== 4-5-6. COURS ===================== -->
+     <section class="section section--creme" id="cours" aria-labelledby="titre-cours">
+       <div class="conteneur">
+-        <div class="entete-section">
++        <div class="entete-section entete-section--3d">
+           <span class="surtitre">Les cours</span>
+           <h2 id="titre-cours">Choisissez votre langue, je m'occupe du reste</h2>
+           <p class="intro">Trois langues, des cours individuels ou en groupe, et un coaching en communication professionnelle. Écrivez-moi en un clic depuis le bloc qui vous correspond.</p>
++          <!-- Animation 3D décorative (8 s, en boucle, sans son), visible sur ordinateur. Fichiers : assets/video/ub-academy-3d-langues.mp4, .webm et l'image ub-academy-3d-langues-affiche.webp -->
++          <div class="video-3d">
++            <video muted loop playsinline preload="none" poster="assets/video/ub-academy-3d-langues-affiche.webp" width="720" height="1280" aria-hidden="true" tabindex="-1">
++              <source src="assets/video/ub-academy-3d-langues.mp4" type="video/mp4">
++              <source src="assets/video/ub-academy-3d-langues.webm" type="video/webm">
++            </video>
++            <button class="video-3d__pause" type="button" aria-label="Mettre l'animation en pause" aria-pressed="false" hidden><svg class="video-3d__icone-pause" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg><svg class="video-3d__icone-lecture" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M8 5v14l11-7z"/></svg></button>
++          </div>
+         </div>
+ 
+         <div class="cours-liste">

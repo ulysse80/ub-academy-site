@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://domaine-a-renseigner.invalid/sitemap.xml
